@@ -53,14 +53,6 @@ class Zoro extends models_1.AnimeParser {
                 });
                 const hasSub = $('div.film-stats div.tick div.tick-item.tick-sub').length > 0;
                 const hasDub = $('div.film-stats div.tick div.tick-item.tick-dub').length > 0;
-                const subCount = $('div.film-stats div.tick div.tick-item.tick-sub').text();
-                const dubCount = $('div.film-stats div.tick div.tick-item.tick-dub').text();
-                if (subCount) {
-                    info.subcount = subCount;
-                }
-                if (dubCount) {
-                    info.dubcount = dubCount;
-                }
                 if (hasSub) {
                     info.subOrDub = models_1.SubOrSub.SUB;
                     info.hasSub = hasSub;

@@ -305,6 +305,7 @@ export interface ISource {
     sources: IVideo[];
     download?: string;
     embedURL?: string;
+    backdrop_path?: string;
 }
 /**
  * Used **only** for movie/tvshow providers
