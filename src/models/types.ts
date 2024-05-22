@@ -332,6 +332,7 @@ export interface ISource {
   sources: IVideo[];
   download?: string;
   embedURL?: string;
+  backdrop_path?: string;
 }
 
 /**
