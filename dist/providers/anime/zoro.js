@@ -15,7 +15,6 @@ class Zoro extends models_1.AnimeParser {
          * @param id Anime id
          */
         this.fetchAnimeInfo = async (id) => {
-            var _a, _b;
             const info = {
                 id: id,
                 title: '',
@@ -35,8 +34,8 @@ class Zoro extends models_1.AnimeParser {
                 info.url = `${this.baseUrl}/${id}`;
                 info.recommendations = await this.scrapeCard($);
                 info.relatedAnime = [];
-                info.subcount = (_a = $('.tick-item.tick-sub')) === null || _a === void 0 ? void 0 : _a.text();
-                info.dubcount = (_b = $('.tick-item.tick-dub')) === null || _b === void 0 ? void 0 : _b.text();
+                info.subcount = $('div.tick div.tick-item.tick-sub').text();
+                info.dubcount = $('div.tick div.tick-item.tick-dub').text();
                 $("#main-sidebar section:nth-child(1) div.anif-block-ul li").each((i, ele) => {
                     var _a, _b, _c, _d, _e, _f, _g;
                     const card = $(ele);
