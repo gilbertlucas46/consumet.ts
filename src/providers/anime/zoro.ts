@@ -209,6 +209,8 @@ class Zoro extends AnimeParser {
       info.url = `${this.baseUrl}/${id}`;
       info.recommendations = await this.scrapeCard($);
       info.relatedAnime = [];
+      info.subcount = $('.tick-item.tick-sub')?.text();
+      info.dubcount = $('.tick-item.tick-dub')?.text();
       $("#main-sidebar section:nth-child(1) div.anif-block-ul li").each((i, ele) => {
         const card = $(ele);
         const aTag = card.find('.film-name a');
